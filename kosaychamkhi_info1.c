@@ -65,5 +65,15 @@ void ajouterkart(){
     printf("nom du kart :");
     scanf("%s",&k.nom);
     printf("choisissez une categorie existante:\n");
-    for i
+    for (i=0;i< nbcategories;i++){
+        printf("%d.%s (ID:%d)\n",i+1,tabcategories[i].nom,tabcategories[i].id);
+    }
+    int choix;
+        printf("votre choix :");
+        scanf("%d",&choix);
+        k.idcategorie = tabcategories[choix-1].id;
+        tabkarts[nbcartes]=k;
+        nbcarts++;
+        printf("kart ajoute avec succes !\n");
+
 }
